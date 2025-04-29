@@ -1,0 +1,447 @@
+/* Estilos para la barra superior */
+#topBar {
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    background: linear-gradient(90deg, #dc3545, #a71d2a);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+#slogan {
+    transition: opacity 0.5s ease;
+    display: block;
+    /* Asegura que se muestre como bloque */
+    color: aliceblue !important;
+}
+
+.btn-close-white {
+    filter: invert(1) brightness(100%);
+}
+
+/* Efecto hover para los enlaces */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dc3545;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-link-underline {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #dc3545 !important;
+    font-weight: bold;
+}
+
+/* Efecto para el botón del carrito */
+#btnCarrito:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 25, 0.705);
+}
+
+/* Animación para el contador del carrito */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Efecto para el logo */
+.navbar-brand {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el navbar cuando se hace scroll */
+.navbar-scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido de ejemplo para probar el scroll */
+.content-section {
+    height: 1000px;
+    padding: 50px 0;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenedor de tamaño fijo para el carrusel */
+.fixed-size-carousel {
+    width: 100%;
+    height: 400px;
+    /* Altura fija */
+    position: relative;
+    perspective: 1000px;
+}
+
+.fixed-img-container {
+    width: 100%;
+    height: 400px;
+    /* Misma altura que el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fixed-img-container img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.hover-scale {
+    transition: all 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+    color: #dc3545;
+}
+
+.particles-container {
+    background: radial-gradient(circle at center, rgba(220, 53, 69, 0.1) 0%, transparent 70%);
+}
+
+/* Animación para las partículas */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Efecto de zoom suave al cambiar imágenes */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item:not(.active) {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* FOOTER */
+
+/* Estilos base */
+footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%) !important;
+}
+
+.bg-dark-light {
+    background-color: rgba(30, 30, 30, 0.7) !important;
+    border: 1px solid #333 !important;
+}
+
+/* Efecto de ondas */
+.wave-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+/* Efectos hover */
+.hover-lift {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+    color: #dc3545 !important;
+}
+
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #dc3545;
+    transition: width 0.3s ease;
+}
+
+.hover-underline:hover:after {
+    width: 100%;
+}
+
+.hover-shake:hover {
+    animation: shake 0.5s;
+}
+
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-5px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Lista de contacto */
+.contact-list a {
+    position: relative;
+    padding-left: 30px;
+    display: block;
+}
+
+.contact-list i.fas {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.map-pin,
+.phone-ring,
+.email-send {
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Mini mapa */
+.mini-map {
+    transition: all 0.3s ease;
+    height: 120px;
+}
+
+.mini-map:hover {
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    border-color: white !important;
+}
+
+/* Horario */
+.day-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.progress {
+    height: 5px;
+    background-color: #333;
+}
+
+/* Social icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    transition: all 0.3s ease;
+}
+
+.social-icon .tooltip {
+    position: absolute;
+    top: -30px;
+    background: #dc3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.social-icon:hover .tooltip {
+    opacity: 1;
+    top: -40px;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon.facebook {
+    background: rgba(59, 89, 152, 0.2);
+    color: #3b5998;
+}
+
+.social-icon.facebook:hover {
+    background: #3b5998;
+    color: white;
+}
+
+.social-icon.instagram {
+    background: rgba(225, 48, 108, 0.2);
+    color: #e1306c;
+}
+
+.social-icon.instagram:hover {
+    background: #e1306c;
+    color: white;
+}
+
+.social-icon.twitter {
+    background: rgba(29, 161, 242, 0.2);
+    color: #1da1f2;
+}
+
+.social-icon.twitter:hover {
+    background: #1da1f2;
+    color: white;
+}
+
+.social-icon.youtube {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
+
+.social-icon.youtube:hover {
+    background: #ff0000;
+    color: white;
+}
+
+.social-icon.whatsapp {
+    background: rgba(37, 211, 102, 0.2);
+    color: #25d366;
+}
+
+.social-icon.whatsapp:hover {
+    background: #25d366;
+    color: white;
+}
+
+/* Newsletter */
+.newsletter-box {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid #333;
+}
+
+/* Copyright */
+.copyright-section {
+    position: relative;
+}
+
+/* Animaciones */
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wave-divider-top svg {
+        height: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
